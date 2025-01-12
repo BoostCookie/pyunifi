@@ -1,5 +1,5 @@
 pkgname=python-pyunifi
-pkgver=r256.cf2c735
+pkgver=r257.468609d
 pkgrel=1
 pkgdesc='A rewrite of https://github.com/unifi-hackers/unifi-lab in cleaner Python.'
 arch=('any')
@@ -11,8 +11,8 @@ source=("${pkgname}::git+https://github.com/BoostCookie/pyunifi.git")
 md5sums=('SKIP')
 
 pkgver() {
-	cd "$pkgname"
-	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+    cd "$pkgname"
+    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 build() {
